@@ -1,6 +1,13 @@
 = foreman_reserve
 
-Description goes here.
+In order to work, the foreman application must be the following two lines commented out.
+
+config/routes.rb 
+	# match '*a', :to => 'errors#routing'
+
+config/routes/v1.rb
+	# match '*other', :to => 'home#route_error'
+
 
 == Contributing to foreman_reserve
  
