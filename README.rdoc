@@ -17,15 +17,11 @@ config/routes/v1.rb
 = Usage
 
 To return 1 host:
-ppcurl -u admin:secret -H 'accept:application/json' http://0.0.0.0:3000/api/hosts_reserve
+curl -u admin:secret -H 'accept:application/json' http://0.0.0.0:3000/api/hosts_reserve
 
 To return multiple hosts, pass a parameter called 'amount'
 
-ppcurl -u admin:secret -H 'accept:application/json' http://0.0.0.0:3000/api/hosts_reserve?amount=3
-
-
-
-
+curl -u admin:secret -H 'accept:application/json' http://0.0.0.0:3000/api/hosts_reserve?amount=3
 
 == Contributing to foreman_reserve
  
