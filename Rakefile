@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "foreman_reserve"
   gem.homepage = "http://github.com/isratrade/foreman_reserve"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Plugin engine for Foreman to reserve a host}
+  gem.description = %Q{Plugin engine for Foreman to reserve a host}
   gem.email = "jmagen@redhat.com"
   gem.authors = ["Joseph Mitchell Magen"]
   # dependencies defined in Gemfile
