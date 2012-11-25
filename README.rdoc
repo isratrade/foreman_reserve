@@ -1,5 +1,16 @@
 = foreman_reserve
 
+This gem will added a route to the API to return the name of available host(s)
+
+To return 1 host:
+ppcurl -u admin:secret -H 'accept:application/json' http://0.0.0.0:3000/api/hosts_reserve
+
+To return multiple hosts, pass a parameter called 'amount'
+
+ppcurl -u admin:secret -H 'accept:application/json' http://0.0.0.0:3000/api/hosts_reserve?amount=3
+
+
+
 In order to work, the foreman application must be the following two lines commented out.
 
 config/routes.rb 
