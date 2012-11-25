@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
 
-  get "reserve" => "foreman_reserve/hosts#reserve" , :as => :hosts_reserve_page
+  get "api/hosts_reserve" => "foreman_reserve/hosts#reserve"
 
 end
