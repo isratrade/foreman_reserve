@@ -32,6 +32,7 @@ Gem::Specification.new do |s|
     "lib/application_helper.rb",
     "lib/engine.rb",
     "lib/foreman_reserve.rb",
+    "lib/rails/railties/tasks.rake",
     "test/helper.rb",
     "test/test_foreman_reserve.rb"
   ]
