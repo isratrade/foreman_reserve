@@ -24,7 +24,13 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "app/controllers/foreman_reserve/hosts_controller.rb",
+    "app/models/foreman_reserve/host.rb",
+    "config/routes.rb",
     "foreman_reserve.gemspec",
+    "lib/application_controller.rb",
+    "lib/application_helper.rb",
+    "lib/engine.rb",
     "lib/foreman_reserve.rb",
     "test/helper.rb",
     "test/test_foreman_reserve.rb"
