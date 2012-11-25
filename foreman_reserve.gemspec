@@ -19,10 +19,12 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "foreman_reserve.gemspec",
     "lib/foreman_reserve.rb",
     "test/helper.rb",
     "test/test_foreman_reserve.rb"
