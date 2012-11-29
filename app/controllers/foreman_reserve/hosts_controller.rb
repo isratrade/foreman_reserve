@@ -11,7 +11,7 @@ module ForemanReserve
         redirect_to('/')  and return
       end
 
-      my_hosts        = User.current.admin? ? ForemanReserve::Host : ForemanReserve::Host.my_hosts
+      my_hosts        = User.current.admin? ? Host : Host.my_hosts
       amount          = (params[:amount] || 1).to_i
       potential_hosts = my_hosts.search_for(params[:query])
 
