@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joseph Mitchell Magen"]
-  s.date = "2012-11-25"
+  s.date = "2012-12-05"
   s.description = "Plugin engine for Foreman to reserve a host"
   s.email = "jmagen@redhat.com"
   s.extra_rdoc_files = [
@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "app/controllers/foreman_reserve/hosts_controller.rb",
-    "app/models/foreman_reserve/host.rb",
+    "app/models/foreman_reserve/host_extensions.rb",
     "config/routes.rb",
     "foreman_reserve.gemspec",
     "lib/application_controller.rb",
