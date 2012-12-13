@@ -1,8 +1,6 @@
 module ForemanReserve
 	module HostExtensions
-	    def self.included(base)
-	        base.send :include, InstanceMethods
-	    end
+		extend ActiveSupport::Concern
 
 	    module InstanceMethods
 			def reserve!
