@@ -13,7 +13,7 @@ module ForemanReserve
 
       my_hosts        = User.current.admin? ? Host : Host.my_hosts
       amount          = (params[:amount] || 1).to_i
-      potential_hosts = my_hosts.search_for(params[:query]) - my_hosts.search_for(params[:query]).includes(:host_parameters).where("parameters.name = ?", "RESERVED")
+      potential_hosts = my_hosts.search_for(params[:query]) - my_hosts.search_for(params[:query]).includes(:host_parameters).where("parameters.name = ?", "RESERVED").where("parameters.value = ?", "true")
 
       return not_found if potential_hosts.empty?
 
