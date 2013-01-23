@@ -23,6 +23,10 @@ To return multiple hosts, pass a parameter called 'amount'
 
 curl -u admin:secret -H 'accept:application/json' http://0.0.0.0:3000/api/hosts_reserve?amount=3
 
+To release a host:
+
+curl -u admin:secret -H 'accept:application/json' http://0.0.0.0:3000/api/hosts_release?host_name=myreservedhost
+
 == Contributing to foreman_reserve
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.

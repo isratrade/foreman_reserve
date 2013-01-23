@@ -29,6 +29,8 @@ module ForemanReserve
 
     end
 
+    unloadable
+
     def release
 
       unless api_request?
@@ -37,17 +39,16 @@ module ForemanReserve
         redirect_to('/')  and return
       end
 
-      my_hosts        = User.current.admin? ? Host : Host.my_hosts
-      amount          = (params[:amount] || 1).to_i
-      reserved_hosts = my_hosts.search_for(params[:query]).includes(:host_parameters).where("parameters.name = ?", "RESERVED").where("parameters.value = ?", "true")
+      host_name     = params[:host_name]
+      my_hosts      = User.current.admin? ? Host : Host.my_hosts
+      reserved_host = my_hosts.search_for(params[:query]).includes(:host_parameters).where("parameters.name = ?", "RESERVED").where("parameters.value = ?", "true").where("hosts.name = ?", host_name)
 
-      return not_found if reserved_hosts.empty?
+      return not_found if reserved_host.empty?
 
-      return not_acceptable if reserved_hosts.count < amount
-
-      @hosts = reserved_hosts[0..(amount-1)].each { |host| host.release! }
+      @hosts = reserved_host[0]
+      @hosts.release!
       respond_to do |format|
-        format.json {render :json => @hosts.map(&:name) }
+        format.json {render :json => @hosts[:name] }
         format.yaml {render :text => @hosts.to_yaml}
         format.html {not_found }
 
