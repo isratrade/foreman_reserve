@@ -23,9 +23,17 @@ To return multiple hosts, pass a parameter called 'amount'
 
 curl -u admin:secret -H 'accept:application/json' http://0.0.0.0:3000/api/hosts_reserve?amount=3
 
-To release a host:
+Filter using a specific query: (name ~ virt%)
 
-curl -u admin:secret -H 'accept:application/json' http://0.0.0.0:3000/api/hosts_release?host_name=myreservedhost
+curl -u admin:secret -H 'accept:application/json' 'http://0.0.0.0:3000/api/hosts_reserve?query=name%20~%20virt%25'
+
+Release a specific host:
+
+curl -u admin:secret -H 'accept:application/json' 'http://0.0.0.0:3000/api/hosts_release?host_name=myreservedhost'
+
+Release a group of hosts using a query: (name ~ virt%)
+
+curl -u admin:secret -H 'accept:application/json' 'http://0.0.0.0:3000/api/hosts_reserve?query=name%20~%20virt%25'
 
 == Contributing to foreman_reserve
  
