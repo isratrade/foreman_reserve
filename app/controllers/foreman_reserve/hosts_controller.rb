@@ -13,13 +13,14 @@ module ForemanReserve
 
       my_hosts        = User.current.admin? ? Host : Host.my_hosts
       amount          = (params[:amount] || 1).to_i
+      reason          = params[:reason] || 'true'
       potential_hosts = my_hosts.search_for(params[:query]) - my_hosts.search_for(params[:query]).includes(:host_parameters).where("parameters.name = ?", "RESERVED").where("parameters.value = ?", "true")
 
       return not_found if potential_hosts.empty?
 
       return not_acceptable if potential_hosts.count < amount
 
-      @hosts = potential_hosts[0..(amount-1)].each { |host| host.reserve! }
+      @hosts = potential_hosts[0..(amount-1)].each { |host| host.reserve!(reason) }
       respond_to do |format|
         format.json {render :json => @hosts.map(&:name) }
         format.yaml {render :text => @hosts.to_yaml}
