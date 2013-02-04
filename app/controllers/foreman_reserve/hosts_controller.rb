@@ -43,12 +43,12 @@ module ForemanReserve
       my_hosts      = User.current.admin? ? Host : Host.my_hosts
       query         = params[:query]
       if host_name != ''
-        reserved_hosts= my_hosts.search_for(params[:query]).includes(:host_parameters).where("parameters.name = ?", "RESERVED").where("parameters.value = ?", "true")
+        reserved_hosts = my_hosts.search_for(params[:query]).includes(:host_parameters).where("parameters.name = ?", "RESERVED").where("parameters.value = ?", "true")
       else
         reserved_hosts = my_hosts.search_for(params[:query]).includes(:host_parameters).where("parameters.name = ?", "RESERVED").where("parameters.value = ?", "true").where("hosts.name = ?", host_name)
       end
 
-      return not_found if reserved_host.empty?
+      return not_found if reserved_hosts.empty?
 
       @hosts = reserved_hosts.each { |host| host.release! }
       respond_to do |format|
