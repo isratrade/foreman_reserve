@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "foreman_reserve"
-  s.version = "0.1.2"
+  s.version = "0.1.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joseph Mitchell Magen"]
-  s.date = "2012-12-05"
+  s.date = "2013-02-05"
   s.description = "Plugin engine for Foreman to reserve a host"
   s.email = "jmagen@redhat.com"
   s.extra_rdoc_files = [
