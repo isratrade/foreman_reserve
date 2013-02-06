@@ -16,7 +16,7 @@ Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "foreman_reserve"
   gem.homepage = "http://github.com/isratrade/foreman_reserve"
-  gem.license = "MIT"
+  gem.license = "GPL-3"
   gem.summary = %Q{Plugin engine for Foreman to reserve a host}
   gem.description = %Q{Plugin engine for Foreman to reserve a host}
   gem.email = "jmagen@redhat.com"
