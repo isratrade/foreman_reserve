@@ -37,7 +37,7 @@ Gem::Specification.new do |s|
     "test/test_foreman_reserve.rb"
   ]
   s.homepage = "http://github.com/isratrade/foreman_reserve"
-  s.licenses = ["MIT"]
+  s.licenses = ["GPL-3"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.24"
   s.summary = "Plugin engine for Foreman to reserve a host"
