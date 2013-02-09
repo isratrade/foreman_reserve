@@ -21,7 +21,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{Plugin engine for Foreman to reserve a host}
   gem.email = "jmagen@redhat.com"
   gem.authors = ["Joseph Mitchell Magen"]
-  # dependencies defined in Gemfile
+  gem.version = '0.1.3'
 end
 #Jeweler::RubygemsDotOrgTasks.new
 
