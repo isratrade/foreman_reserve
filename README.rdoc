@@ -1,5 +1,7 @@
 = foreman_reserve
 
+NOTE: The development of the plugin has been moved to https://github.com/david-caro/foreman_reserve
+
 This gem will added a route to the API to return the name of available host(s)
 
 = Installation:
